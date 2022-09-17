@@ -1,0 +1,55 @@
+package com.csc205.project2;
+
+public class Sphere extends Shape {
+
+    private double radius;
+
+    public Sphere() {
+        super();
+        this.radius = 0.0;
+    }
+
+    public Sphere(double v) {
+        super();
+        this.radius = v;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public double surfaceArea() {
+        return 4.0 * Math.PI * Math.pow(radius, 2);
+    }
+
+    public double volume() {
+        return (4.0/3.0) * Math.PI * Math.pow(radius, 3);
+    }
+
+    public int faces(){
+        return 0;
+    }
+    public int edges() {
+        return 0;
+    }
+    public int vertices() {
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Sphere {");
+        sb.append("radius=").append(radius);
+        sb.append(", surface area=").append(surfaceArea());
+        sb.append(", volume=").append(volume());
+        sb.append(", faces=").append(faces());
+        sb.append(", edges=").append(edges());
+        sb.append(", vertices=").append(vertices());
+        sb.append('}');
+        return sb.toString();
+    }
+}
